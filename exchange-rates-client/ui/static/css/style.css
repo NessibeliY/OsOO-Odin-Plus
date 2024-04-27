@@ -1,0 +1,19 @@
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 10px;
+  }
+
+  img {
+    width: 10px;
+  }

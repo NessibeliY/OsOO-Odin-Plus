@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../static/css/style.css" />
+    <title>Cryptocurrency Exchange Rates</title>
+  </head>
+  <body>
+
+
+    <h1>{{.Name}} ({{.Symbol}})</h1>
+    <img src="{{.Image}}" alt="{{.Name}}">
+
+    <h2>Price Information</h2>
+    <p>Current Price: ${{.CurrentPrice}}</p>
+    <p>Market Cap: ${{.MarketCap}}</p>
+    <p>Market Cap Rank: #{{.MarketCapRank}}</p>
+    <p>High 24H: ${{.High24H}}</p>
+    <p>Low 24H: ${{.Low24H}}</p>
+    <p>Price Change 24H: ${{.PriceChange24H}} ({{.PriceChangePercentage24H}}%)</p>
+    <p>Market Cap Change 24H: ${{.MarketCapChange24H}} ({{.MarketCapChangePercentage24H}}%)</p>
+
+    <h2>Supply Information</h2>
+    <p>Circulating Supply: {{.CirculatingSupply}}</p>
+    <p>Total Supply: {{.TotalSupply}}</p>
+    <p>Max Supply: {{.MaxSupply}}</p>
+
+    <h2>All Time High/Low</h2>
+    <p>All Time High: ${{.Ath}} ({{.AthChangePercentage}}%) - {{.AthDate}}</p>
+    <p>All Time Low: ${{.Atl}} ({{.AtlChangePercentage}}%) - {{.AtlDate}}</p>
+
+    <h2>Return on Investment</h2>
+    <p>ROI: {{.Roi.Times}}x ({{.Roi.Percentage}}% in {{.Roi.Currency}})</p>
+
+    <p>Last Updated: {{.LastUpdated}}</p>
+
+    <br />
+  </body>
+</html>

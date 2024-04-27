@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../static/css/style.css" />
+    <title>Cryptocurrency Exchange Rates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>CurrentPrice</th>
+            <th>MarketCap</th>
+            <th>MarketCapRank</th>
+            <th>FullyDilutedValuation</th>
+            <th>TotalVolume</th>
+            <th>High24H</th>
+            <th>Low24H</th>
+            <th>PriceChangePercentage24H</th>
+            <th>MarketCapChangePercentage24H</th>
+        </tr>
+        {{range $index, $element := .}}
+        <tr>
+            <td>{{$index}}</td>
+            <td>{{$element.Symbol}}</td>
+            <td><a href="/currencies?id={{$index}}">{{$element.Name}}</a></td>
+            <td><img src="{{$element.Image}}" /></td>
+            <td>{{$element.CurrentPrice}}</td>
+            <td>{{$element.MarketCap}}</td>
+            <td>{{$element.MarketCapRank}}</td>
+            <td>{{$element.FullyDilutedValuation}}</td>
+            <td>{{$element.TotalVolume}}</td>
+            <td>{{$element.High24H}}</td>
+            <td>{{$element.Low24H}}</td>
+            <td>{{$element.PriceChangePercentage24H}}</td>
+            <td>{{$element.MarketCapChangePercentage24H}}</td>
+        </tr>
+        {{end}}
+    </table>
+
+    <br />
+  </body>
+</html>
