@@ -1,0 +1,15 @@
+.blue-bg {
+    background-color: blue;
+}
+
+.green-bg {
+    background-color: green;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table,td,th {
+    border: 1px solid black;
+}
